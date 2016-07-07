@@ -1,0 +1,22 @@
+{
+  "name": "cabin_heroku",
+  "version": "1.0.0",
+  "description": "This example application created by [getstream.io](https://getstream.io/?ref=github_stream_react_example) teaches you how to to build an Instagram style application with activity streams and newsfeeds.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "heroku-prebuild": "npm --prefix ./app i && npm --prefix ./app ../api i",
+    "heroku-postbuild": "echo This runs afterwards."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbarbugli/stream-react-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbarbugli/stream-react-example/issues"
+  },
+  "homepage": "https://github.com/tbarbugli/stream-react-example#readme"
+}
