@@ -8,7 +8,7 @@
   "scripts": {
     "heroku-prebuild": "npm --prefix ./app i && npm --prefix ./api i",
     "heroku-postbuild": "npm --prefix ./app run build",
-    "web": "npm --prefix ./app start"
+    "web": "npm --prefix ./api start"
   },
   "repository": {
     "type": "git",
