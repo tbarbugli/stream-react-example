@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "heroku-prebuild": "npm --prefix ./app i && npm --prefix ./app ../api i",
+    "heroku-prebuild": "npm --prefix ./app i && npm --prefix ./api i",
     "heroku-postbuild": "echo This runs afterwards."
   },
   "repository": {
