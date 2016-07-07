@@ -3,6 +3,26 @@
 /**
  * Config
  */
+
+
+if (process.env.CLEARDB_DATABASE_URL) {
+    var dbUrlRegEx = /mysql:\/\/([^:]+):([^@]+)@([^/]+)\/([\d\w-]+)/;
+    var matches =  dbUrlRegEx.exec(process.env.CLEARDB_DATABASE_URL);
+    process.env.DB_USERNAME = matches[1];
+    process.env.DB_PASSWORD = matches[2];
+    process.env.DB_HOST = matches[3];
+    process.env.DB_NAME = matches[4];
+    process.env.DB_PORT = 3306;
+}
+
+if (process.env.STREAM_URL) {
+    var streamUrlRegEx = /https:\/\/([^:]+):([^@]+)@[^/]+\/\?app_id=(\d+)/;
+    var matches = streamUrlRegEx.exec(process.env.CLEARDB_DATABASE_URL);
+    process.env.STREAM_KEY = matches[1];
+    process.env.STREAM_SECRET = matches[2];
+    process.env.STREAM_APP_ID = matches[3];
+}
+
 module.exports = {
     name: 'GetStream.io - React Example App',
     version: '1.0.0',
@@ -12,7 +32,7 @@ module.exports = {
         secret: process.env.JWT_SECRET,
     },
     db: {
-         name: 'cabin',
+         name: process.env.DB_NAME || 'cabin',
          username: process.env.DB_USERNAME,
          password: process.env.DB_PASSWORD,
          host: process.env.DB_HOST,
@@ -32,9 +52,9 @@ module.exports = {
         secret: process.env.STREAM_SECRET,
     },
     algolia: {
-        appId: process.env.ALGOLIA_APP_ID,
-        searchOnlyKey: process.env.ALGOLIA_SEARCH_ONLY_KEY,
-        apiKey: process.env.ALGOLIA_API_KEY,
+        appId: process.env.ALGOLIASEARCH_APPLICATION_ID,
+        searchOnlyKey: process.env.ALGOLIASEARCH_API_KEY_SEARCH,
+        apiKey: process.env.ALGOLIASEARCH_API_KEY,
     },
     keen: {
         projectId: process.env.KEEN_PROJECT_ID,

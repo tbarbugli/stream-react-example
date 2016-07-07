@@ -1,0 +1,16 @@
+{
+  "name": "Cabin",
+  "description": "Pinterest esque example app using GetStream.io",
+  "keywords": [
+    "getstream.io",
+    "HTML5",
+    "ReactJS"
+  ],
+  "website": "https://getstream.io/",
+  "repository": "https://github.com/GetStream/stream-example-php",
+  "logo": "http://33.media.tumblr.com/avatar_be8b5eef9ae6_128.png",
+  "success_url": "/",
+  "addons": [
+    "stream", "cleardb", "algoliasearch", "keen"
+  ]
+}

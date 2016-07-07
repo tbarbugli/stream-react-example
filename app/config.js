@@ -15,14 +15,14 @@ module.exports = {
         key: process.env.STREAM_KEY,
     },
     api: {
-        baseUrl: process.env.API_URL,
+        baseUrl: '/',
     },
     imgix: {
         baseUrl: process.env.IMGIX_BASE_URL,
     },
     algolia: {
-        appId: process.env.ALGOLIA_APP_ID,
-        searchOnlyKey: process.env.ALGOLIA_SEARCH_ONLY_KEY,
+        appId: process.env.ALGOLIASEARCH_APPLICATION_ID,
+        searchOnlyKey: process.env.ALGOLIASEARCH_API_KEY_SEARCH,
     },
     keen: {
         projectId: process.env.KEEN_PROJECT_ID,
