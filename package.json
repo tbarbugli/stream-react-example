@@ -7,7 +7,8 @@
   "devDependencies": {},
   "scripts": {
     "heroku-prebuild": "npm --prefix ./app i && npm --prefix ./api i",
-    "heroku-postbuild": "echo This runs afterwards."
+    "heroku-postbuild": "npm --prefix ./app run build",
+    "web": "npm --prefix ./app start"
   },
   "repository": {
     "type": "git",
